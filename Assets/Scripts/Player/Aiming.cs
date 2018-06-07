@@ -5,13 +5,15 @@ using UnityEngine;
 public class Aiming : MonoBehaviour {
 
 
-
     void Update()
     {
+
+
+
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);// - transform.position;
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         //Quaternion rotation = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
-        angle = Mathf.Clamp(angle, -90, 90);
+         angle = Mathf.Clamp(angle, -90, 90);
 
         transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, angle);
 
@@ -34,7 +36,7 @@ public class Aiming : MonoBehaviour {
                 transform.Rotate(0, 0, -1);
             }
         }
-
-        */
+*/
+        
     }
 }
